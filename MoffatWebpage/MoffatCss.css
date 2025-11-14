@@ -1,0 +1,254 @@
+/* =========================================
+   GLOBAL BASE STYLES
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #bcc9c5;     /* seafoam background */
+  color: #2f3b3b;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Wrap page so content is centered on large screens */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #bcc9c5;
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
+
+/* Full-width header bar */
+.site-header {
+
+  background-color: #316270;
+  color: #ffffff;
+  width: 100%;
+    height: 280px; 
+}
+
+.top-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-area img {
+  height: 90px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Thin peach strip under header */
+.peach-strip {
+  height: 40px;
+  background-color: #f9e4d6;
+}
+
+/* =========================================
+   HERO IMAGE
+   ========================================= */
+
+.hero-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* About page hero image */
+.about-hero {
+  background-image: url("AboutPageBackground.png");
+}
+
+/* =========================================
+   ABOUT PAGE CONTENT
+   ========================================= */
+
+.about-section {
+  background-color: #bcc9c5;
+  padding: 40px 40px 80px 40px;
+}
+
+/* White cards for “Our Purpose” / “Our Story” */
+.content-card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+  display: inline-block;
+  padding: 10px 24px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-left: 6px solid #92b7bb;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #316270;
+  font-family: "Georgia", serif;
+}
+
+.content-text p {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  color: #4b5b5b;
+  line-height: 1.6;
+}
+
+.content-image-placeholder {
+  border: 1px dashed #d0d7d6;
+  background-color: #f4f7f6;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #7d8a8a;
+}
+
+/* =========================================
+   FOOTER – WAVE + THREE COLUMNS
+   ========================================= */
+
+footer {
+  background-color: #316270;
+  color: #ffffff;
+  margin-top: -230px;
+  position: relative;
+  width: 100%
+}
+
+/* Wrapper for everything inside footer */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 40px 40px;  /* top space leaves room for wave */
+}
+
+/* Wave graphic at top of footer */
+.footer-wave {
+  background: url("https://github.com/Fraustika/Moffat-Bay/blob/main/moffatdesignshape.png") top center no-repeat;
+  background-size: 100% auto;
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  text-align: left;
+}
+
+.footer-column h4 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-top: 2px solid #ffffff;
+  display: inline-block;
+  padding-top: 6px;
+}
+
+.footer-column p {
+  margin: 5px 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.footer-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 700px) {
+  .hero-image {
+    height: 140px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .content-card {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 700px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-column {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+}
+}
